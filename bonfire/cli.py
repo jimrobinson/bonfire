@@ -124,7 +124,7 @@ def run(host,
     username = gl_api.username
 
     # Check if the stream id should be retrieved from the configuration
-    if stream[0] == ":":
+    if stream is not None and stream[0] == ":":
         section_name = "stream" + stream
         template_options = dict(map(lambda t: tuple(str(t).split("=", 1)), template_option))
         stream = get_templated_option(cfg, section_name, "stream", template_options)
