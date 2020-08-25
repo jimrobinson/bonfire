@@ -85,6 +85,15 @@ Now you can run queries via such as::
     > bonfire :example
     ... runs the example query on the default node
 
+You may additionally define stream identifiers using names you find easier to remember::
+
+    [stream:myapp]
+    stream=4d874fa9736b4e100df764fe
+
+Now you can query a stream using ``-r :<name>``::
+
+    bonfire -r :myapp message:504
+
 Query Templates
 ---------------
 
