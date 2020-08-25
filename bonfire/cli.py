@@ -32,7 +32,7 @@ from .formats import tail_format, dump_format
 @click.option("--endpoint", default="/", help="Your graylog API endpoint e.g /api (default: /)")
 @click.option("-u", "--username", default=None, help="Your graylog username")
 @click.option("-p", "--password", default=None, help="Your graylog password (default: prompt)")
-@click.option("-k/-nk", "--keyring/--no-keyring", default=False, help="Use keyring to store/retrieve password")
+@click.option("-k/-nk", "--keyring/--no-keyring", default=True, help="Use keyring to store/retrieve password")
 @click.option("-@", "--search-from", default="5 minutes ago", help="Query range from")
 @click.option("-#", "--search-to", default=None, help="Query range to (default: now)")
 @click.option('-t', '--tail', 'mode', flag_value='tail', default=True, help="Show the last n lines for the query (default)")
